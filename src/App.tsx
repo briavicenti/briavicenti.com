@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { css, Global, ThemeProvider, withTheme } from '@emotion/react';
 
-function App() {
+import theme from './theme/theme';
+import background from './assets/background.png';
+
+const App: React.FunctionComponent = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalWithTheme styles={globalCss} />
+      <div>HELLO</div>
+    </ThemeProvider>
   );
-}
+};
+
+const GlobalWithTheme = withTheme(Global);
+
+const globalCss = css`
+  body {
+    font-family: 'Assistant';
+    background-image: url(${background});
+    background-color: ${theme.colors.sand};
+  }
+`;
 
 export default App;
