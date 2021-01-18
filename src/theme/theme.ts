@@ -1,12 +1,13 @@
 export default {
   colors: {
-    forest: '#255c59',
+    kelp: '#255c59',
     sand: '#dcdcdc',
     white: '#fff',
   },
   fontSizes: {
     body: '14px',
-    title: '24px',
+    subtitle: '24px',
+    title: '48px',
   },
   spacings: {
     0: '0px',
@@ -15,5 +16,6 @@ export default {
     3: '16px',
     4: '24px',
     5: '32px',
+    6: '48px',
   },
 } as const;
