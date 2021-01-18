@@ -6,7 +6,7 @@ export default {
   },
   fontSizes: {
     body: '14px',
-    subtitle: '24px',
+    subtitle: '28px',
     title: '48px',
   },
   spacings: {

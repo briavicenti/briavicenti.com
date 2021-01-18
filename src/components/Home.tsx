@@ -10,7 +10,7 @@ const Header: React.FunctionComponent = () => {
       <Contents>
         <Title>Hi, I'm Bria.</Title>
         <Subtitle>
-          Currently building frontends @{' '}
+          Based in Seattle, currently building with React and Typescript @{' '}
           <Link href='https://www.bazaarvoice.com/' target='_blank'>
             Bazaarvoice
           </Link>
@@ -86,6 +86,9 @@ const Title = styled.div(
 const Subtitle = styled.div(
   ({ theme }) => `
   font-size: ${theme.fontSizes.subtitle};
+  max-width: 500px;
+  text-align: center;
+  margin-top: ${theme.spacings[2]};
 `,
 );
 
